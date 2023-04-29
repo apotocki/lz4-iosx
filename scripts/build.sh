@@ -47,7 +47,7 @@ generic_build simulator "arm64;x86_64" "-sdk iphonesimulator" "-DCMAKE_SYSTEM_NA
 generic_build osx "arm64;x86_64" "" "-DCMAKE_XCODE_ATTRIBUTE_ONLY_ACTIVE_ARCH=NO -DCMAKE_IOS_INSTALL_COMBINED=YES" "" "macos-*"
 
 #mkdir $BUILD_DIR/frameworks
-xcodebuild -create-xcframework -library $BUILD_DIR/build.ios.arm64/Release-iphoneos/liblz4.a -library $BUILD_DIR/build.simulator.arm64_x86_64/Release-iphonesimulator/liblz4.a -library $BUILD_DIR/build.osx.arm64_x86_64/Release/liblz4.a -output $BUILD_DIR/frameworks/lzma.xcframework
+xcodebuild -create-xcframework -library $BUILD_DIR/build.ios.arm64/Release-iphoneos/liblz4.a -library $BUILD_DIR/build.simulator.arm64_x86_64/Release-iphonesimulator/liblz4.a -library $BUILD_DIR/build.osx.arm64_x86_64/Release/liblz4.a -output $BUILD_DIR/frameworks/lz4.xcframework
 [[ ! -d $BUILD_DIR/frameworks/Headers ]] && mkdir $BUILD_DIR/frameworks/Headers
 cp $LZ4_VER_NAME/lib/*.h $BUILD_DIR/frameworks/Headers/
 fi
