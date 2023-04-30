@@ -29,7 +29,7 @@ The actual library version is taken from https://github.com/lz4/lz4 with tag 'v1
     use_frameworks!
     pod 'lz4-iosx', '~> 1.9.4'
     # or optionally more precisely
-    # pod 'lz4-iosx', :git => 'https://github.com/apotocki/lz4-iosx', :tag => '1.9.4.0'
+    # pod 'lz4-iosx', :git => 'https://github.com/apotocki/lz4-iosx', :tag => '1.9.4.1'
 ```    
 install new dependency:
 ```

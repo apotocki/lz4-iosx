@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
     s.name         = "lz4-iosx"
-    s.version      = "1.9.4.0"
+    s.version      = "1.9.4.1"
     s.summary      = "LZ4 XCFramework for macOS and iOS, including both arm64 and x86_64 builds for macOS and Simulator."
-    s.homepage     = "https://github.com/apotocki/lz4-iosx-iosx"
+    s.homepage     = "https://github.com/apotocki/lz4-iosx"
     s.license      = "BSD 2-Clause license"
     s.author       = { "Alexander Pototskiy" => "alex.a.potocki@gmail.com" }
     s.social_media_url = "https://www.linkedin.com/in/alexander-pototskiy"
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
     s.header_mappings_dir = "frameworks/Headers"
     s.public_header_files = "frameworks/Headers/**/*.{h,H,c}"
     s.source_files = "frameworks/Headers/**/*.{h,H,c}"
-    s.vendored_frameworks = "frameworks/lzma.xcframework"
+    s.vendored_frameworks = "frameworks/lz4.xcframework"
         
     #s.preserve_paths = "frameworks/**/*"
 end
