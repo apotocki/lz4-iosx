@@ -1,9 +1,9 @@
 ## LZ4 for iOS and Mac OS X (Intel & Apple Silicon) - arm64 / x86_64
 
-Supported version: 1.9.4
+Supported version: 1.10.0
 
 This repo provides a universal script for building a static liblz4 library for use in iOS and Mac OS X applications.
-The actual library version is taken from https://github.com/lz4/lz4 with tag 'v1.9.4'
+The actual library version is taken from https://github.com/lz4/lz4 with tag 'v1.10.0'
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ The actual library version is taken from https://github.com/lz4/lz4 with tag 'v1
 ## Build Manually
 ```
     # clone the repo
-    git clone -b 1.9.4 https://github.com/apotocki/lz4-iosx
+    git clone -b 1.10.0 https://github.com/apotocki/lz4-iosx
     
     # build libraries
     cd lz4-iosx
@@ -64,9 +64,9 @@ scripts/build.sh -p=ios,iossim-x86_64 --rebuild
 Add the following lines to your project's Podfile:
 ```
     use_frameworks!
-    pod 'lz4-iosx', '~> 1.9.4'
+    pod 'lz4-iosx', '~> 1.10.0'
     # or optionally more precisely e.g.:
-    # pod 'lz4-iosx', :git => 'https://github.com/apotocki/lz4-iosx', :tag => '1.9.4.3'
+    # pod 'lz4-iosx', :git => 'https://github.com/apotocki/lz4-iosx', :tag => '1.10.0.0'
 ```
 Then install the dependencies:
 ```
