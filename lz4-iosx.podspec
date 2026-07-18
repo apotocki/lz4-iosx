@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "lz4-iosx"
-    s.version      = "1.9.4.3.3"
+    s.version      = "1.10.0.0.0"
     s.summary      = "LZ4 XCFramework for macOS, iOS, watchOS, tvOS, and visionOS, including builds for Mac Catalyst, iOS Simulator, watchOS Simulator, tvOS Simulator, and visionOS Simulator."
     s.homepage     = "https://github.com/apotocki/lz4-iosx"
     s.license      = "BSD 2-Clause license"

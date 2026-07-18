@@ -1,9 +1,10 @@
 ## LZ4 for iOS and Mac OS X (Intel & Apple Silicon) - arm64 / x86_64
 
-Supported versions: [1.9.4](https://github.com/apotocki/lz4-iosx/tree/1.9.4)
+Supported versions: [1.10.0](https://github.com/apotocki/lz4-iosx/tree/1.10.0), [1.9.4](https://github.com/apotocki/lz4-iosx/tree/1.9.4)
 
 
 This repo provides a universal script for building a static liblz4 library for use in iOS and Mac OS X applications.
+The actual library version is taken from https://github.com/lz4/lz4 with the corresponding tag.
 
 ## Prerequisites
 
