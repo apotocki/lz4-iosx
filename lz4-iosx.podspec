@@ -1,24 +1,33 @@
 Pod::Spec.new do |s|
     s.name         = "lz4-iosx"
-    s.version      = "1.9.4.0"
-    s.summary      = "LZ4 XCFramework for macOS and iOS, including both arm64 and x86_64 builds for macOS and Simulator."
-    s.homepage     = "https://github.com/apotocki/lz4-iosx-iosx"
+    s.version      = "1.9.4.2.2"
+    s.summary      = "LZ4 XCFramework for macOS, iOS, watchOS, tvOS, and visionOS, including builds for Mac Catalyst, iOS Simulator, watchOS Simulator, tvOS Simulator, and visionOS Simulator."
+    s.homepage     = "https://github.com/apotocki/lz4-iosx"
     s.license      = "BSD 2-Clause license"
     s.author       = { "Alexander Pototskiy" => "alex.a.potocki@gmail.com" }
     s.social_media_url = "https://www.linkedin.com/in/alexander-pototskiy"
     s.ios.deployment_target = "13.4"
     s.osx.deployment_target = "11.0"
-    s.osx.pod_target_xcconfig = { 'ONLY_ACTIVE_ARCH' => 'YES' }
+    s.tvos.deployment_target = "13.0"
+    s.watchos.deployment_target = "11.0"
+    s.visionos.deployment_target = "1.0"
     s.ios.pod_target_xcconfig = { 'ONLY_ACTIVE_ARCH' => 'YES' }
+    s.osx.pod_target_xcconfig = { 'ONLY_ACTIVE_ARCH' => 'YES' }
+    s.tvos.pod_target_xcconfig = { 'ONLY_ACTIVE_ARCH' => 'YES' }
+    s.watchos.pod_target_xcconfig = { 'ONLY_ACTIVE_ARCH' => 'YES' }
+    s.visionos.pod_target_xcconfig = { 'ONLY_ACTIVE_ARCH' => 'YES' }
+    s.ios.user_target_xcconfig = { 'ONLY_ACTIVE_ARCH' => 'YES' }
+    s.osx.user_target_xcconfig = { 'ONLY_ACTIVE_ARCH' => 'YES' }
+    s.tvos.user_target_xcconfig = { 'ONLY_ACTIVE_ARCH' => 'YES' }
+    s.watchos.user_target_xcconfig = { 'ONLY_ACTIVE_ARCH' => 'YES' }
+    s.visionos.user_target_xcconfig = { 'ONLY_ACTIVE_ARCH' => 'YES' }
     s.static_framework = true
-    s.requires_arc = false
     s.prepare_command = "sh scripts/build.sh"
     s.source       = { :git => "https://github.com/apotocki/lz4-iosx.git", :tag => "#{s.version}" }
 
     s.header_mappings_dir = "frameworks/Headers"
     s.public_header_files = "frameworks/Headers/**/*.{h,H,c}"
     s.source_files = "frameworks/Headers/**/*.{h,H,c}"
-    s.vendored_frameworks = "frameworks/lzma.xcframework"
-        
-    #s.preserve_paths = "frameworks/**/*"
+    s.vendored_frameworks = "frameworks/lz4.xcframework"
+
 end
