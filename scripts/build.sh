@@ -254,7 +254,7 @@ build_xcframework()
     [[ "$BUILD_PLATFORMS" == *"tvos "* ]] && LIBARGS="$LIBARGS -library $LZ4_VER_NAME-tvos-build/Release-appletvos/lib$1.a"
     [[ "$BUILD_PLATFORMS" == *"watchos "* ]] && LIBARGS="$LIBARGS -library $LZ4_VER_NAME-watchos-build/Release-watchos/lib$1.a"
 
-    xcodebuild -create-xcframework $LIBARGS -output $INSTALL_DIR/frameworks/$1.xcframework
+    xcodebuild -create-xcframework $LIBARGS -output $INSTALL_DIR/$1.xcframework
 }
 
 for i in $LIBS_TO_BUILD; do :;

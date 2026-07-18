@@ -66,7 +66,7 @@ Add the following lines to your project's Podfile:
     use_frameworks!
     pod 'lz4-iosx', '~> 1.9.4'
     # or optionally more precisely e.g.:
-    # pod 'lz4-iosx', :git => 'https://github.com/apotocki/lz4-iosx', :tag => '1.9.4.2'
+    # pod 'lz4-iosx', :git => 'https://github.com/apotocki/lz4-iosx', :tag => '1.9.4.3'
 ```
 Then install the dependencies:
 ```
