@@ -1,0 +1,18 @@
+{
+  "branches": [
+    {
+      "series": "1.10",
+      "title": "1.10.x upstream versions",
+      "versions": [
+        "1.10.0"
+      ]
+    },
+    {
+      "series": "1.9",
+      "title": "1.9.x upstream versions",
+      "versions": [
+        "1.9.4"
+      ]
+    }
+  ]
+}
