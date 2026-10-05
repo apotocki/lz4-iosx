@@ -24,7 +24,7 @@ Use the appropriate **Git tag or branch** to select the desired LZ4 version.
 ### Versioning Policy
 
 Branches correspond to official LZ4 versions.
-Tags use the format `<lz4_version>.<package_patch>` (e.g. `1.10.0.1`), where `package_patch` is this repository’s packaging/build revision for that upstream version.
+Tags use the format `<lz4_version>.<package_patch>` (e.g. `1.10.0.2`), where `package_patch` is this repository’s packaging/build revision for that upstream version.
 
 ---
 
@@ -134,7 +134,7 @@ Add the following to your `Podfile`:
 use_frameworks!
 pod 'lz4-iosx', '~> 1.10.0'
 # or pin to a specific tag
-# pod 'lz4-iosx', :git => 'https://github.com/apotocki/lz4-iosx', :tag => '1.10.0.1'
+# pod 'lz4-iosx', :git => 'https://github.com/apotocki/lz4-iosx', :tag => '1.10.0.2'
 ```
 
 Then install the dependency:
