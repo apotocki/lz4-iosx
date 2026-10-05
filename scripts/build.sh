@@ -173,18 +173,18 @@ build_catalyst_libs()
 [[ "$BUILD_PLATFORMS" == *"watchos "* ]] && apple_build watchos arm64 $WATCHOS_VERSION -DCMAKE_SYSTEM_NAME=watchOS -DCMAKE_OSX_SYSROOT=watchos
 
 LIBARGS=
-[[ "$BUILD_PLATFORMS" == *macosx* ]] && LIBARGS="$LIBARGS -library $BUILD_DIR/build.macosx/liblz4.a"
-[[ "$BUILD_PLATFORMS" == *catalyst* ]] && LIBARGS="$LIBARGS -library $BUILD_DIR/build.catalyst/liblz4.a"
-[[ "$BUILD_PLATFORMS" == *iossim* ]] && LIBARGS="$LIBARGS -library $BUILD_DIR/build.iossim/liblz4.a"
-[[ "$BUILD_PLATFORMS" == *xrossim* ]] && LIBARGS="$LIBARGS -library $BUILD_DIR/build.xrossim/liblz4.a"
-[[ "$BUILD_PLATFORMS" == *tvossim* ]] && LIBARGS="$LIBARGS -library $BUILD_DIR/build.tvossim/liblz4.a"
-[[ "$BUILD_PLATFORMS" == *watchossim* ]] && LIBARGS="$LIBARGS -library $BUILD_DIR/build.watchossim/liblz4.a"
-[[ "$BUILD_PLATFORMS" == *"ios "* ]] && LIBARGS="$LIBARGS -library $BUILD_DIR/build.ios.arm64/liblz4.a"
-[[ "$BUILD_PLATFORMS" == *"xros "* ]] && LIBARGS="$LIBARGS -library $BUILD_DIR/build.xros.arm64/liblz4.a"
-[[ "$BUILD_PLATFORMS" == *"tvos "* ]] && LIBARGS="$LIBARGS -library $BUILD_DIR/build.tvos.arm64/liblz4.a"
-[[ "$BUILD_PLATFORMS" == *"watchos "* ]] && LIBARGS="$LIBARGS -library $BUILD_DIR/build.watchos.arm64/liblz4.a"
+[[ "$BUILD_PLATFORMS" == *macosx* ]] && LIBARGS="$LIBARGS -library $BUILD_DIR/build.macosx/liblz4.a -headers $BUILD_DIR/frameworks/Headers"
+[[ "$BUILD_PLATFORMS" == *catalyst* ]] && LIBARGS="$LIBARGS -library $BUILD_DIR/build.catalyst/liblz4.a -headers $BUILD_DIR/frameworks/Headers"
+[[ "$BUILD_PLATFORMS" == *iossim* ]] && LIBARGS="$LIBARGS -library $BUILD_DIR/build.iossim/liblz4.a -headers $BUILD_DIR/frameworks/Headers"
+[[ "$BUILD_PLATFORMS" == *xrossim* ]] && LIBARGS="$LIBARGS -library $BUILD_DIR/build.xrossim/liblz4.a -headers $BUILD_DIR/frameworks/Headers"
+[[ "$BUILD_PLATFORMS" == *tvossim* ]] && LIBARGS="$LIBARGS -library $BUILD_DIR/build.tvossim/liblz4.a -headers $BUILD_DIR/frameworks/Headers"
+[[ "$BUILD_PLATFORMS" == *watchossim* ]] && LIBARGS="$LIBARGS -library $BUILD_DIR/build.watchossim/liblz4.a -headers $BUILD_DIR/frameworks/Headers"
+[[ "$BUILD_PLATFORMS" == *"ios "* ]] && LIBARGS="$LIBARGS -library $BUILD_DIR/build.ios.arm64/liblz4.a -headers $BUILD_DIR/frameworks/Headers"
+[[ "$BUILD_PLATFORMS" == *"xros "* ]] && LIBARGS="$LIBARGS -library $BUILD_DIR/build.xros.arm64/liblz4.a -headers $BUILD_DIR/frameworks/Headers"
+[[ "$BUILD_PLATFORMS" == *"tvos "* ]] && LIBARGS="$LIBARGS -library $BUILD_DIR/build.tvos.arm64/liblz4.a -headers $BUILD_DIR/frameworks/Headers"
+[[ "$BUILD_PLATFORMS" == *"watchos "* ]] && LIBARGS="$LIBARGS -library $BUILD_DIR/build.watchos.arm64/liblz4.a -headers $BUILD_DIR/frameworks/Headers"
 
 [[ -d $BUILD_DIR/frameworks ]] && rm -rf $BUILD_DIR/frameworks
 mkdir -p $BUILD_DIR/frameworks/Headers
-xcodebuild -create-xcframework $LIBARGS -output $BUILD_DIR/frameworks/lz4.xcframework
 cp $LZ4_VER_NAME/lib/*.h $BUILD_DIR/frameworks/Headers/
+xcodebuild -create-xcframework $LIBARGS -output $BUILD_DIR/frameworks/lz4.xcframework

@@ -117,8 +117,8 @@ Add the following to your `Podfile`:
 use_frameworks!
 pod 'lz4-iosx', '~> 1.10.0'
 # or pin to a specific tag
-# tags are formatted as <lz4_version>.<package_patch>, e.g. 1.10.0.1
-# pod 'lz4-iosx', :git => 'https://github.com/apotocki/lz4-iosx', :tag => '1.10.0.1'
+# tags are formatted as <lz4_version>.<package_patch>, e.g. 1.10.0.2
+# pod 'lz4-iosx', :git => 'https://github.com/apotocki/lz4-iosx', :tag => '1.10.0.2'
 ```
 
 Then install the dependency:
