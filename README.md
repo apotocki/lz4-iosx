@@ -1,13 +1,13 @@
 
-## LZ4 1.11.0 for Apple Platforms
+## LZ4 1.11.1 for Apple Platforms
 
-This branch contains build scripts for producing the liblz4 static library packaged as an XCFramework for Apple platforms, based on the **upstream LZ4 1.11.0 release**.
+This branch contains build scripts for producing the liblz4 static library packaged as an XCFramework for Apple platforms, based on the **upstream LZ4 1.11.1 release**.
 
 The LZ4 source code is fetched from the official upstream repository:
 
 [https://github.com/lz4/lz4](https://github.com/lz4/lz4)
 
-using the corresponding upstream tag `v1.11.0`.
+using the corresponding upstream tag `v1.11.1`.
 
 ---
 
@@ -60,7 +60,7 @@ Both Intel (`x86_64`) and Apple Silicon (`arm64`) architectures are supported wh
 
 ```bash
 # clone the repository at the required LZ4 version
-git clone -b 1.11.0 https://github.com/apotocki/lz4-iosx
+git clone -b 1.11.1 https://github.com/apotocki/lz4-iosx
 
 # build libraries
 cd lz4-iosx
@@ -115,10 +115,10 @@ Add the following to your `Podfile`:
 
 ```ruby
 use_frameworks!
-pod 'lz4-iosx', '~> 1.11.0', :source => 'https://github.com/apotocki/cocoapods-specs.git'
+pod 'lz4-iosx', '~> 1.11.1', :source => 'https://github.com/apotocki/cocoapods-specs.git'
 # or pin to a specific tag
-# tags are formatted as <lz4_version>.<package_patch>, e.g. 1.11.0.0
-# pod 'lz4-iosx', :git => 'https://github.com/apotocki/lz4-iosx', :tag => '1.11.0.0'
+# tags are formatted as <lz4_version>.<package_patch>, e.g. 1.11.1.0
+# pod 'lz4-iosx', :git => 'https://github.com/apotocki/lz4-iosx', :tag => '1.11.1.0'
 ```
 
 New versions are published to the [apotocki/cocoapods-specs](https://github.com/apotocki/cocoapods-specs) spec repo, because CocoaPods Trunk becomes read-only on December 2, 2026; `:source` makes CocoaPods take the pod from there.
@@ -137,7 +137,7 @@ Support is provided via **GitHub Issues**.
 
 When reporting a problem, please include:
 
-* LZ4 version: 1.11.0
+* LZ4 version: 1.11.1
 * Target platform(s)
 * Build command and environment details
 
