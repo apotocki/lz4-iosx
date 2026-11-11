@@ -8,13 +8,13 @@ This repository **does not contain LZ4 source code**. The source code is fetched
 
 [https://github.com/lz4/lz4](https://github.com/lz4/lz4)
 
-using the corresponding upstream tag (for example `v1.11.0`).
+using the corresponding upstream tag (for example `v1.11.1`).
 
 ---
 
 ## Supported LZ4 Versions
 
-Supported LZ4 1.11.x upstream versions: [1.11.0](https://github.com/apotocki/lz4-iosx/tree/1.11.0)
+Supported LZ4 1.11.x upstream versions: [1.11.1](https://github.com/apotocki/lz4-iosx/tree/1.11.1), [1.11.0](https://github.com/apotocki/lz4-iosx/tree/1.11.0)
 
 Supported LZ4 1.10.x upstream versions: [1.10.0](https://github.com/apotocki/lz4-iosx/tree/1.10.0)
 
@@ -26,7 +26,7 @@ Use the appropriate **Git tag or branch** to select the desired LZ4 version.
 ### Versioning Policy
 
 Branches correspond to official LZ4 versions.
-Tags use the format `<lz4_version>.<package_patch>` (e.g. `1.11.0.0`), where `package_patch` is this repository’s packaging/build revision for that upstream version.
+Tags use the format `<lz4_version>.<package_patch>` (e.g. `1.11.1.0`), where `package_patch` is this repository’s packaging/build revision for that upstream version.
 
 ---
 
@@ -134,9 +134,9 @@ Add the following to your `Podfile`:
 
 ```ruby
 use_frameworks!
-pod 'lz4-iosx', '~> 1.11.0', :source => 'https://github.com/apotocki/cocoapods-specs.git'
+pod 'lz4-iosx', '~> 1.11.1', :source => 'https://github.com/apotocki/cocoapods-specs.git'
 # or pin to a specific tag
-# pod 'lz4-iosx', :git => 'https://github.com/apotocki/lz4-iosx', :tag => '1.11.0.0'
+# pod 'lz4-iosx', :git => 'https://github.com/apotocki/lz4-iosx', :tag => '1.11.1.0'
 ```
 
 New versions are published to the [apotocki/cocoapods-specs](https://github.com/apotocki/cocoapods-specs) spec repo, because CocoaPods Trunk becomes read-only on December 2, 2026; `:source` makes CocoaPods take the pod from there.

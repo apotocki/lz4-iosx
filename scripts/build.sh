@@ -5,7 +5,7 @@ set -euo pipefail
 THREAD_COUNT=$(sysctl hw.ncpu | awk '{print $2}')
 HOST_ARC=$( uname -m )
 XCODE_ROOT=$( xcode-select -print-path )
-LZ4_VER=v1.11.0
+LZ4_VER=v1.11.1
 MACOSX_VERSION_ARM=12.3
 MACOSX_VERSION_X86_64=12.0
 IOS_VERSION=15.0

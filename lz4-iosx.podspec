@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "lz4-iosx"
-    s.version      = "1.11.0.0"
+    s.version      = "1.11.1.0"
     s.summary      = "LZ4 XCFramework for macOS, iOS, watchOS, tvOS, and visionOS, including Mac Catalyst and simulators."
     s.description  = "LZ4 XCFramework for macOS, iOS, watchOS, tvOS, and visionOS, including Mac Catalyst and simulators. New versions are published to the apotocki/cocoapods-specs spec repo (https://github.com/apotocki/cocoapods-specs), because CocoaPods Trunk becomes read-only on December 2, 2026: add :source => 'https://github.com/apotocki/cocoapods-specs.git' to the pod in your Podfile."
     s.homepage     = "https://github.com/apotocki/lz4-iosx"
