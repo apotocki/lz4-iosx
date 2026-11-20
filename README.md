@@ -1,6 +1,8 @@
 
 ## LZ4 1.11.0 for Apple Platforms
 
+> **LZ4 is now available through [otok](https://otok-dev.github.io/)**, which builds it from source on your machine for the platforms of your app: see [Using otok](https://github.com/apotocki/lz4-iosx/blob/master/README.md#using-otok-recommended) in the `master` branch. otok provides the current versions of LZ4; this branch keeps the build scripts of LZ4 1.11.0.
+
 This branch contains build scripts for producing the liblz4 static library packaged as an XCFramework for Apple platforms, based on the **upstream LZ4 1.11.0 release**.
 
 The LZ4 source code is fetched from the official upstream repository:
