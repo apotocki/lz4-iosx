@@ -1,5 +1,7 @@
 # lz4-iosx
 
+> **Now available through [otok](https://otok-dev.github.io/).** otok builds liblz4 from source on your machine, for the platforms of your app, and hands the result to Xcode as a local Swift package: see [Using otok](#using-otok-recommended). The build scripts and the CocoaPods pod described below remain available.
+
 ## Overview
 
 `lz4-iosx` is a build and distribution project that produces the **liblz4 static library packaged as an XCFramework** for Apple platforms.
@@ -42,6 +44,36 @@ liblz4 is built for:
 * Mac Catalyst
 
 Both Intel (`x86_64`) and Apple Silicon (`arm64`) architectures are supported where applicable.
+
+---
+
+## Using otok (recommended)
+
+[otok](https://otok-dev.github.io/) builds liblz4 from source on your machine, with your Xcode, for the platforms and deployment versions of your app, and gives the result to Xcode as a local Swift package of XCFrameworks. Install it (`brew install otok-dev/tap/otok`) and put an `otok.toml` next to your Xcode project:
+
+```toml
+[otok]
+format = 1
+
+[apple]
+platforms = ["ios", "iossim", "macosx"]
+deployment = { ios = "16.0", macos = "13.0" }
+
+[deps.lz4]
+recipe = "apotocki/lz4"
+version = "~> 1.11"
+```
+
+```bash
+otok install
+```
+
+Then add the `Otok` directory to your app in Xcode (**File → Add Package Dependencies… → Add Local…**) and add the product `LZ4` to your target.
+
+- The privacy manifest of liblz4 comes with the product.
+- `platforms` takes `ios`, `iossim`, `macosx`, `catalyst`, `tvos`, `tvossim`, `watchos`, `watchossim`, `xros`, `xrossim`; `deployment` gives the minimum OS versions (`ios`, `macos`, `catalyst`, `tvos`, `watchos`, `visionos`) and is required for every platform built.
+- `otok.lock` pins the versions, the recipes and the sources by their hashes: commit it with `otok.toml`. `Otok/` is generated: add it to `.gitignore`.
+- The same recipe builds LZ4 for Android, Windows and Linux too. Its versions and options are in the [catalog](https://otok-dev.github.io/index/recipes/apotocki/lz4/) (or `otok info apotocki/lz4`); moving from the pod is described in [Coming from CocoaPods](https://otok-dev.github.io/start/from-cocoapods/).
 
 ---
 
