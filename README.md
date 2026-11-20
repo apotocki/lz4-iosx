@@ -1,5 +1,7 @@
 ## LZ4 for iOS and Mac OS X (Intel & Apple Silicon) - arm64 / x86_64
 
+> **LZ4 is now available through [otok](https://otok-dev.github.io/)**, which builds it from source on your machine for the platforms of your app: see [Using otok](https://github.com/apotocki/lz4-iosx/blob/master/README.md#using-otok-recommended) in the `master` branch. otok provides the current versions of LZ4; this branch keeps the build scripts of LZ4 1.9.4.
+
 Supported version: 1.9.4
 
 This repo provides a universal script for building a static liblz4 library for use in iOS and Mac OS X applications.
